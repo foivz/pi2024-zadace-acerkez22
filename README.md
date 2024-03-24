@@ -17,7 +17,7 @@ Ante Čerkez   | acerkez22@foi.hr    | 0016158905 | acerkez22
 
 
 ## Opis domene
-(Vlastitim riječima opišite domenu ili problem koji pokriva projekt vaše zadaće!)
+Planirano softversko rješenje opisano u dokumentu je namijenjeno za korištenje od strane zaposlenika Gradski autobusi Varaždin. Poslovanje se trenutno vodi na papiru, pa se traži digitalizacija poslovanja što će podići kvalitetu usluga za putnike i poboljšati odvijanje poslovnih procesa.
 
 ## Specifikacija projekta
 (Vlastitim riječima opišite zahtjeve za izradu ovog programskog proizvoda!)
