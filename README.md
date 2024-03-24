@@ -25,7 +25,8 @@ Za putnike se traži da mogu na autobusnoj stanici vidjeti koji autobusi ubrzo d
 Za ubrzanje procesa ukrcavanja u autobus i evidencije putnika u autobusu, poželjna je mogućnost kupnje karte preko kioska na stanici, umjesto kod vozača autobusa, i očitavanja karte preko čitača pri ulazu u autobus.
 
 ## Zadatak
-(U root repozitorija učitajte zadatak koji ste dobili i potom ovdje stavite link na njegovo otvaranje!)
+Zadatak:
+https://github.com/foivz/pi2024-zadace-acerkez22/blob/master/Zadatak%20-%20Gradski%20prijevoz.pdf
 
 ## Resursi
 (Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
