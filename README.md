@@ -20,6 +20,4 @@ Zadatak:
 https://github.com/foivz/pi2024-zadace-acerkez22/blob/master/Zadatak%20-%20Gradski%20prijevoz.pdf
 
 ## Resursi
-(Zadaće je obvezno predati u obliku Wiki stranica na ovom repozitoriju. Slike i druge artefakte koje ćete koristiti na wiki stranicama smjestite u mapu dokumentacije u repozitoriju!)
-
 Svi resursi nalaze se u mapi _Documentation_.
