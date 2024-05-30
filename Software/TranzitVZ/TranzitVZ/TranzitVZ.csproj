@@ -58,6 +58,7 @@
     <Compile Include="FrmVozniRed.Designer.cs">
       <DependentUpon>FrmVozniRed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
