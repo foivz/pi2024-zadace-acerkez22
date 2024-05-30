@@ -62,9 +62,11 @@
     <Compile Include="FrmVozniRed.Designer.cs">
       <DependentUpon>FrmVozniRed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\VozniRed.cs" />
     <Compile Include="Models\Zaposlenik.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\VozniRedRepository.cs" />
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
