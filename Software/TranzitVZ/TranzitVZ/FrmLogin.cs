@@ -42,7 +42,10 @@ namespace TranzitVZ
             {
                 if (txtUsername.Text == username && txtPassword.Text == password)
                 {
-                    MessageBox.Show("Dobrodošli.", "Prijavljeni ste", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    FrmVozniRed frmVozniRed = new FrmVozniRed();
+                    Hide();
+                    frmVozniRed.ShowDialog();
+                    Close();
                 }
                 else
                 {
