@@ -30,5 +30,13 @@ namespace TranzitVZ
             var vozniReds = VozniRedRepository.GetVozniReds();
             dgvVozniRed.DataSource = vozniReds;
         }
+
+        private void btnNatrag_Click(object sender, EventArgs e)
+        {
+            FrmOdabir frmOdabir = new FrmOdabir();
+            Hide();
+            frmOdabir.ShowDialog();
+            Close();
+        }
     }
 }

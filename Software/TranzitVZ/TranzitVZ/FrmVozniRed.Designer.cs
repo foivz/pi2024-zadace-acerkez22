@@ -29,22 +29,41 @@
         private void InitializeComponent()
         {
             this.dgvVozniRed = new System.Windows.Forms.DataGridView();
+            this.btnNatrag = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRed)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvVozniRed
             // 
+            this.dgvVozniRed.AllowUserToAddRows = false;
+            this.dgvVozniRed.AllowUserToDeleteRows = false;
+            this.dgvVozniRed.AllowUserToResizeColumns = false;
+            this.dgvVozniRed.AllowUserToResizeRows = false;
+            this.dgvVozniRed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvVozniRed.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvVozniRed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVozniRed.Location = new System.Drawing.Point(12, 8);
+            this.dgvVozniRed.Location = new System.Drawing.Point(12, 12);
             this.dgvVozniRed.Name = "dgvVozniRed";
-            this.dgvVozniRed.Size = new System.Drawing.Size(1079, 569);
+            this.dgvVozniRed.Size = new System.Drawing.Size(1084, 524);
             this.dgvVozniRed.TabIndex = 0;
+            // 
+            // btnNatrag
+            // 
+            this.btnNatrag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNatrag.Location = new System.Drawing.Point(956, 558);
+            this.btnNatrag.Name = "btnNatrag";
+            this.btnNatrag.Size = new System.Drawing.Size(140, 62);
+            this.btnNatrag.TabIndex = 1;
+            this.btnNatrag.Text = "Natrag";
+            this.btnNatrag.UseVisualStyleBackColor = true;
+            this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
             // FrmVozniRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1103, 637);
+            this.ClientSize = new System.Drawing.Size(1108, 642);
+            this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.dgvVozniRed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -61,5 +80,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvVozniRed;
+        private System.Windows.Forms.Button btnNatrag;
     }
 }
