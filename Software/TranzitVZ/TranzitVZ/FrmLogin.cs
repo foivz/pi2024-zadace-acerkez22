@@ -42,9 +42,9 @@ namespace TranzitVZ
             {
                 if (txtUsername.Text == username && txtPassword.Text == password)
                 {
-                    FrmVozniRed frmVozniRed = new FrmVozniRed();
+                    FrmOdabir frmOdabir = new FrmOdabir();
                     Hide();
-                    frmVozniRed.ShowDialog();
+                    frmOdabir.ShowDialog();
                     Close();
                 }
                 else
