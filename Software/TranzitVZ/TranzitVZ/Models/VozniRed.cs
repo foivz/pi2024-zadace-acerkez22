@@ -8,8 +8,10 @@ namespace TranzitVZ.Models
 {
     public class VozniRed
     {
-        public int IdVoznogReda { get; set; }
-        public int IdLinije {  get; set; }
-        public int IdStanice { get; set; }
+        public int BrojStanice { get; set; }
+        public string NazivStanice {  get; set; }
+        public string DodatniOpis { get; set; }
+        public string VrijemePolaska { get; set; }
+
     }
 }

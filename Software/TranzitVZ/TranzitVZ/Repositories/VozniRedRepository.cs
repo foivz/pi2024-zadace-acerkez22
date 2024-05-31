@@ -10,10 +10,10 @@ namespace TranzitVZ.Repositories
 {
     public class VozniRedRepository
     {
-        public static VozniRed GetVozniRed(int id)
+        public static VozniRed GetVozniRed(int brojStanice)
         {
             VozniRed vozniRed = null;
-            string sql = $"SELECT * FROM voznired WHERE idVoznogReda = {id}";
+            string sql = $"SELECT * FROM VozniRed WHERE brojStanice = {brojStanice}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if(reader.HasRows)
@@ -30,7 +30,7 @@ namespace TranzitVZ.Repositories
         {
             var vozniReds = new List<VozniRed>();
 
-            string sql = "SELECT * FROM voznired";
+            string sql = "SELECT * FROM VozniRed";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
 
@@ -48,15 +48,17 @@ namespace TranzitVZ.Repositories
 
         private static VozniRed CreateObject(SqlDataReader reader)
         {
-            int id = int.Parse(reader["idVoznogReda"].ToString());
-            int idLinije = int.Parse(reader["idLinije"].ToString());
-            int idStanice = int.Parse(reader["idStanice"].ToString());
+            int brojStanice = int.Parse(reader["brojStanice"].ToString());
+            string nazivStanice = reader["nazivStanice"].ToString();
+            string dodatniOpis = reader["dodatniOpis"].ToString();
+            string vrijemePolaska = reader["vrijemePolaska"].ToString();
 
             var vozniRed = new VozniRed
             {
-                IdVoznogReda = id,
-                IdLinije = idLinije,
-                IdStanice = idStanice,
+                BrojStanice = brojStanice,
+                NazivStanice = nazivStanice,
+                DodatniOpis = dodatniOpis,
+                VrijemePolaska = vrijemePolaska
             };
             return vozniRed;
         }

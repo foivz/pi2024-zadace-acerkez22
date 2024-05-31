@@ -35,16 +35,16 @@
             // dgvVozniRed
             // 
             this.dgvVozniRed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVozniRed.Location = new System.Drawing.Point(18, 8);
+            this.dgvVozniRed.Location = new System.Drawing.Point(12, 8);
             this.dgvVozniRed.Name = "dgvVozniRed";
-            this.dgvVozniRed.Size = new System.Drawing.Size(871, 392);
+            this.dgvVozniRed.Size = new System.Drawing.Size(1079, 569);
             this.dgvVozniRed.TabIndex = 0;
             // 
             // FrmVozniRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 493);
+            this.ClientSize = new System.Drawing.Size(1103, 637);
             this.Controls.Add(this.dgvVozniRed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
