@@ -51,11 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmDodaj.cs">
+    <Compile Include="FrmDodajRed.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDodaj.Designer.cs">
-      <DependentUpon>FrmDodaj.cs</DependentUpon>
+    <Compile Include="FrmDodajRed.Designer.cs">
+      <DependentUpon>FrmDodajRed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzmijeniPark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzmijeniPark.Designer.cs">
+      <DependentUpon>FrmIzmijeniPark.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIzmijeniRed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIzmijeniRed.Designer.cs">
+      <DependentUpon>FrmIzmijeniRed.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -89,8 +101,14 @@
     <Compile Include="Repositories\VozniParkRepository.cs" />
     <Compile Include="Repositories\VozniRedRepository.cs" />
     <Compile Include="Repositories\ZaposlenikRepository.cs" />
-    <EmbeddedResource Include="FrmDodaj.resx">
-      <DependentUpon>FrmDodaj.cs</DependentUpon>
+    <EmbeddedResource Include="FrmDodajRed.resx">
+      <DependentUpon>FrmDodajRed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzmijeniPark.resx">
+      <DependentUpon>FrmIzmijeniPark.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIzmijeniRed.resx">
+      <DependentUpon>FrmIzmijeniRed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

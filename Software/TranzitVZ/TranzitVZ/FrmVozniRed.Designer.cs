@@ -81,6 +81,7 @@
             this.btnIzmijeni.TabIndex = 3;
             this.btnIzmijeni.Text = "Izmijeni";
             this.btnIzmijeni.UseVisualStyleBackColor = true;
+            this.btnIzmijeni.Click += new System.EventHandler(this.btnIzmijeni_Click);
             // 
             // FrmVozniRed
             // 

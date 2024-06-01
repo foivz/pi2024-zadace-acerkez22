@@ -41,14 +41,18 @@ namespace TranzitVZ
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            FrmDodaj frmDodaj = new FrmDodaj();
-            frmDodaj.Osvjezi += new EventHandler(FrmDodaj_Osvjezi);
+            FrmDodajRed frmDodaj = new FrmDodajRed();
             frmDodaj.ShowDialog();
-        }
-        private void FrmDodaj_Osvjezi(object sender, EventArgs e)
-        {
             ShowVozniRed();
         }
-        
+
+        private void btnIzmijeni_Click(object sender, EventArgs e)
+        {
+            VozniRed odabran = dgvVozniRed.CurrentRow.DataBoundItem as VozniRed;
+
+            FrmIzmijeniRed frmIzmijeniRed = new FrmIzmijeniRed(odabran);
+            frmIzmijeniRed.ShowDialog();
+            ShowVozniRed();
+        }
     }
 }

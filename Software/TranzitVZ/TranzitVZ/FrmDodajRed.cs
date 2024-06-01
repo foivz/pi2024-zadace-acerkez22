@@ -13,10 +13,9 @@ using TranzitVZ.Repositories;
 
 namespace TranzitVZ
 {
-    public partial class FrmDodaj : Form
+    public partial class FrmDodajRed : Form
     {
-        public event EventHandler Osvjezi;
-        public FrmDodaj()
+        public FrmDodajRed()
         {
             InitializeComponent();
         }
@@ -25,7 +24,6 @@ namespace TranzitVZ
         {
             DB.SetConfiguration("PI2324_acerkez22_DB", "PI2324_acerkez22_User", "7P-ZyF0{");
             VozniRedRepository.DodajVozniRed(txtNazivStanice.Text, txtDodatniOpis.Text, txtVrijemePolaska.Text);
-            Osvjezi?.Invoke(this, EventArgs.Empty);
             Close();
         }
 

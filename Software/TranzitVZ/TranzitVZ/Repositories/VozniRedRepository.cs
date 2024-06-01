@@ -13,7 +13,7 @@ namespace TranzitVZ.Repositories
         public static VozniRed GetVozniRed(int brojStanice)
         {
             VozniRed vozniRed = null;
-            string sql = $"SELECT brojStanice FROM VozniRed WHERE brojStanice = {brojStanice}";
+            string sql = $"SELECT * FROM VozniRed WHERE brojStanice = {brojStanice}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if(reader.HasRows)
@@ -25,6 +25,7 @@ namespace TranzitVZ.Repositories
             DB.CloseConnection();
             return vozniRed;
         }
+
 
         public static List<VozniRed> GetVozniReds()
         {
@@ -66,6 +67,21 @@ namespace TranzitVZ.Repositories
         public static void DodajVozniRed(string nazivStanice, string dodatniOpis, string vrijemePolaska)
         {
             string sql = $"INSERT INTO VozniRed (nazivStanice, dodatniOpis, vrijemePolaska) VALUES ('{nazivStanice}', '{dodatniOpis}', '{vrijemePolaska}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+
+        public static void PromijeniVozniRed(string nazivStanice, string dodatniOpis, string vrijemePolaska, int brojStanice)
+        {
+            string sql = $"UPDATE VozniRed SET nazivStanice = '{nazivStanice}', dodatniOpis = '{dodatniOpis}', vrijemePolaska = '{vrijemePolaska}' WHERE brojStanice = '{brojStanice}'";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
+        }
+        public static void BrisiVozniRed(int brojStanice)
+        {
+            string sql = $"DELETE FROM VozniRed WHERE brojStanice = {brojStanice}";
             DB.OpenConnection();
             DB.ExecuteCommand(sql);
             DB.CloseConnection();
