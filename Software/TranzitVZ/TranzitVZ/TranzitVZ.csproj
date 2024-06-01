@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDodajPark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDodajPark.Designer.cs">
+      <DependentUpon>FrmDodajPark.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDodajRed.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     <Compile Include="Repositories\VozniParkRepository.cs" />
     <Compile Include="Repositories\VozniRedRepository.cs" />
     <Compile Include="Repositories\ZaposlenikRepository.cs" />
+    <EmbeddedResource Include="FrmDodajPark.resx">
+      <DependentUpon>FrmDodajPark.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDodajRed.resx">
       <DependentUpon>FrmDodajRed.cs</DependentUpon>
     </EmbeddedResource>

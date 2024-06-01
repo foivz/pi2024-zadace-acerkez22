@@ -41,8 +41,8 @@ namespace TranzitVZ
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            FrmDodajRed frmDodaj = new FrmDodajRed();
-            frmDodaj.ShowDialog();
+            FrmDodajRed frmDodajRed = new FrmDodajRed();
+            frmDodajRed.ShowDialog();
             ShowVozniRed();
         }
 
@@ -53,6 +53,21 @@ namespace TranzitVZ
             FrmIzmijeniRed frmIzmijeniRed = new FrmIzmijeniRed(odabran);
             frmIzmijeniRed.ShowDialog();
             ShowVozniRed();
+        }
+
+        private void txtTrazi_TextChanged(object sender, EventArgs e)
+        {
+            string trazi = txtTrazi.Text.Trim();
+
+            if (!string.IsNullOrWhiteSpace(trazi))
+            {
+                var vozniRed = VozniRedRepository.SearchVozniRed(trazi);
+                dgvVozniRed.DataSource = vozniRed;
+            }
+            else
+            {
+                ShowVozniRed();
+            }
         }
     }
 }

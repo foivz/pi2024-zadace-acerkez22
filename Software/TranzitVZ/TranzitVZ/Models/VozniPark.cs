@@ -13,5 +13,6 @@ namespace TranzitVZ.Models
         public string Proizvodjac {  get; set; }
         public int BrojSjedala { get; set; }
         public int Kilometraza { get; set; }
+        public string Registracija { get; set; }
     }
 }

@@ -26,7 +26,6 @@ namespace TranzitVZ.Repositories
             return vozniRed;
         }
 
-
         public static List<VozniRed> GetVozniReds()
         {
             var vozniReds = new List<VozniRed>();
@@ -63,7 +62,36 @@ namespace TranzitVZ.Repositories
             };
             return vozniRed;
         }
+        
+        public static List<VozniRed> SearchVozniRed(string trazi)
+        {
+            var vozniRed = new List<VozniRed>();
 
+            string sql = $"SELECT * FROM VozniRed WHERE nazivStanice LIKE '%{trazi}%'";
+            DB.OpenConnection();
+            var reader = DB.GetDataReader(sql);
+
+            while (reader.Read())
+            {
+                int brojStanice = int.Parse(reader["brojStanice"].ToString());
+                string nazivStanice = reader["nazivStanice"].ToString();
+                string dodatniOpis = reader["dodatniOpis"].ToString();
+                string vrijemePolaska = reader["vrijemePolaska"].ToString();
+                var red = new VozniRed
+                {
+                    BrojStanice = brojStanice,
+                    NazivStanice = nazivStanice,
+                    DodatniOpis = dodatniOpis,
+                    VrijemePolaska = vrijemePolaska
+                };
+                vozniRed.Add(red);
+            }
+
+            reader.Close();
+            DB.CloseConnection();
+
+            return vozniRed;
+        }
         public static void DodajVozniRed(string nazivStanice, string dodatniOpis, string vrijemePolaska)
         {
             string sql = $"INSERT INTO VozniRed (nazivStanice, dodatniOpis, vrijemePolaska) VALUES ('{nazivStanice}', '{dodatniOpis}', '{vrijemePolaska}')";

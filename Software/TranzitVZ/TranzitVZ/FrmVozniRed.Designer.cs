@@ -32,6 +32,8 @@
             this.btnNatrag = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnIzmijeni = new System.Windows.Forms.Button();
+            this.txtTrazi = new System.Windows.Forms.TextBox();
+            this.lblTrazi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRed)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,11 +85,31 @@
             this.btnIzmijeni.UseVisualStyleBackColor = true;
             this.btnIzmijeni.Click += new System.EventHandler(this.btnIzmijeni_Click);
             // 
+            // txtTrazi
+            // 
+            this.txtTrazi.Location = new System.Drawing.Point(225, 25);
+            this.txtTrazi.Name = "txtTrazi";
+            this.txtTrazi.Size = new System.Drawing.Size(380, 20);
+            this.txtTrazi.TabIndex = 4;
+            this.txtTrazi.TextChanged += new System.EventHandler(this.txtTrazi_TextChanged);
+            // 
+            // lblTrazi
+            // 
+            this.lblTrazi.AutoSize = true;
+            this.lblTrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrazi.Location = new System.Drawing.Point(12, 25);
+            this.lblTrazi.Name = "lblTrazi";
+            this.lblTrazi.Size = new System.Drawing.Size(207, 20);
+            this.lblTrazi.TabIndex = 5;
+            this.lblTrazi.Text = "Pretražite po nazivu stanice:";
+            // 
             // FrmVozniRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 642);
+            this.Controls.Add(this.lblTrazi);
+            this.Controls.Add(this.txtTrazi);
             this.Controls.Add(this.btnIzmijeni);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnNatrag);
@@ -101,6 +123,7 @@
             this.Load += new System.EventHandler(this.FrmVozniRed_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRed)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,5 +133,7 @@
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnIzmijeni;
+        private System.Windows.Forms.TextBox txtTrazi;
+        private System.Windows.Forms.Label lblTrazi;
     }
 }

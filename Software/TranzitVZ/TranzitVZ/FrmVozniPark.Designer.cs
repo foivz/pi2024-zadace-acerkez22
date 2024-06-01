@@ -32,6 +32,8 @@
             this.btnNatrag = new System.Windows.Forms.Button();
             this.btnDodaj = new System.Windows.Forms.Button();
             this.btnIzmijeni = new System.Windows.Forms.Button();
+            this.lblTrazi = new System.Windows.Forms.Label();
+            this.txtTrazi = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +48,7 @@
             this.dgvVozniPark.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVozniPark.Location = new System.Drawing.Point(12, 53);
             this.dgvVozniPark.Name = "dgvVozniPark";
+            this.dgvVozniPark.ReadOnly = true;
             this.dgvVozniPark.Size = new System.Drawing.Size(1084, 483);
             this.dgvVozniPark.TabIndex = 0;
             // 
@@ -69,6 +72,7 @@
             this.btnDodaj.TabIndex = 2;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnIzmijeni
             // 
@@ -79,12 +83,33 @@
             this.btnIzmijeni.TabIndex = 3;
             this.btnIzmijeni.Text = "Izmijeni";
             this.btnIzmijeni.UseVisualStyleBackColor = true;
+            this.btnIzmijeni.Click += new System.EventHandler(this.btnIzmijeni_Click);
+            // 
+            // lblTrazi
+            // 
+            this.lblTrazi.AutoSize = true;
+            this.lblTrazi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrazi.Location = new System.Drawing.Point(12, 25);
+            this.lblTrazi.Name = "lblTrazi";
+            this.lblTrazi.Size = new System.Drawing.Size(192, 20);
+            this.lblTrazi.TabIndex = 4;
+            this.lblTrazi.Text = "Pretražite po proizvođaču:";
+            // 
+            // txtTrazi
+            // 
+            this.txtTrazi.Location = new System.Drawing.Point(210, 25);
+            this.txtTrazi.Name = "txtTrazi";
+            this.txtTrazi.Size = new System.Drawing.Size(380, 20);
+            this.txtTrazi.TabIndex = 5;
+            this.txtTrazi.TextChanged += new System.EventHandler(this.txtTrazi_TextChanged);
             // 
             // FrmVozniPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 642);
+            this.Controls.Add(this.txtTrazi);
+            this.Controls.Add(this.lblTrazi);
             this.Controls.Add(this.btnIzmijeni);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnNatrag);
@@ -98,6 +123,7 @@
             this.Load += new System.EventHandler(this.FrmVozniPark_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniPark)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -107,5 +133,7 @@
         private System.Windows.Forms.Button btnNatrag;
         private System.Windows.Forms.Button btnDodaj;
         private System.Windows.Forms.Button btnIzmijeni;
+        private System.Windows.Forms.Label lblTrazi;
+        private System.Windows.Forms.TextBox txtTrazi;
     }
 }

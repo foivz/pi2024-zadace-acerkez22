@@ -1,6 +1,6 @@
 ﻿namespace TranzitVZ
 {
-    partial class FrmIzmijeniPark
+    partial class FrmDodajPark
     {
         /// <summary>
         /// Required designer variable.
@@ -32,13 +32,12 @@
             this.txtBrojSjedala = new System.Windows.Forms.TextBox();
             this.txtKilometraza = new System.Windows.Forms.TextBox();
             this.txtRegistracija = new System.Windows.Forms.TextBox();
+            this.btnSpremi = new System.Windows.Forms.Button();
+            this.btnOdustani = new System.Windows.Forms.Button();
             this.lblProizvodjac = new System.Windows.Forms.Label();
             this.lblBrojSjedala = new System.Windows.Forms.Label();
             this.lblKilometraza = new System.Windows.Forms.Label();
             this.lblRegistracija = new System.Windows.Forms.Label();
-            this.btnSpremi = new System.Windows.Forms.Button();
-            this.btnOdustani = new System.Windows.Forms.Button();
-            this.btnBrisi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtProizvodjac
@@ -69,48 +68,12 @@
             this.txtRegistracija.Size = new System.Drawing.Size(246, 20);
             this.txtRegistracija.TabIndex = 3;
             // 
-            // lblProizvodjac
-            // 
-            this.lblProizvodjac.AutoSize = true;
-            this.lblProizvodjac.Location = new System.Drawing.Point(20, 22);
-            this.lblProizvodjac.Name = "lblProizvodjac";
-            this.lblProizvodjac.Size = new System.Drawing.Size(64, 13);
-            this.lblProizvodjac.TabIndex = 4;
-            this.lblProizvodjac.Text = "Proizvođač:";
-            // 
-            // lblBrojSjedala
-            // 
-            this.lblBrojSjedala.AutoSize = true;
-            this.lblBrojSjedala.Location = new System.Drawing.Point(20, 72);
-            this.lblBrojSjedala.Name = "lblBrojSjedala";
-            this.lblBrojSjedala.Size = new System.Drawing.Size(64, 13);
-            this.lblBrojSjedala.TabIndex = 5;
-            this.lblBrojSjedala.Text = "Broj sjedala:";
-            // 
-            // lblKilometraza
-            // 
-            this.lblKilometraza.AutoSize = true;
-            this.lblKilometraza.Location = new System.Drawing.Point(20, 126);
-            this.lblKilometraza.Name = "lblKilometraza";
-            this.lblKilometraza.Size = new System.Drawing.Size(64, 13);
-            this.lblKilometraza.TabIndex = 6;
-            this.lblKilometraza.Text = "Kilometraža:";
-            // 
-            // lblRegistracija
-            // 
-            this.lblRegistracija.AutoSize = true;
-            this.lblRegistracija.Location = new System.Drawing.Point(20, 178);
-            this.lblRegistracija.Name = "lblRegistracija";
-            this.lblRegistracija.Size = new System.Drawing.Size(65, 13);
-            this.lblRegistracija.TabIndex = 7;
-            this.lblRegistracija.Text = "Registracija:";
-            // 
             // btnSpremi
             // 
             this.btnSpremi.Location = new System.Drawing.Point(23, 244);
             this.btnSpremi.Name = "btnSpremi";
             this.btnSpremi.Size = new System.Drawing.Size(81, 36);
-            this.btnSpremi.TabIndex = 8;
+            this.btnSpremi.TabIndex = 4;
             this.btnSpremi.Text = "Spremi";
             this.btnSpremi.UseVisualStyleBackColor = true;
             this.btnSpremi.Click += new System.EventHandler(this.btnSpremi_Click);
@@ -120,33 +83,58 @@
             this.btnOdustani.Location = new System.Drawing.Point(110, 244);
             this.btnOdustani.Name = "btnOdustani";
             this.btnOdustani.Size = new System.Drawing.Size(81, 36);
-            this.btnOdustani.TabIndex = 9;
+            this.btnOdustani.TabIndex = 5;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
             this.btnOdustani.Click += new System.EventHandler(this.btnOdustani_Click);
             // 
-            // btnBrisi
+            // lblProizvodjac
             // 
-            this.btnBrisi.Location = new System.Drawing.Point(23, 324);
-            this.btnBrisi.Name = "btnBrisi";
-            this.btnBrisi.Size = new System.Drawing.Size(81, 36);
-            this.btnBrisi.TabIndex = 10;
-            this.btnBrisi.Text = "Izbriši";
-            this.btnBrisi.UseVisualStyleBackColor = true;
-            this.btnBrisi.Click += new System.EventHandler(this.btnBrisi_Click);
+            this.lblProizvodjac.AutoSize = true;
+            this.lblProizvodjac.Location = new System.Drawing.Point(20, 22);
+            this.lblProizvodjac.Name = "lblProizvodjac";
+            this.lblProizvodjac.Size = new System.Drawing.Size(64, 13);
+            this.lblProizvodjac.TabIndex = 7;
+            this.lblProizvodjac.Text = "Proizvođač:";
             // 
-            // FrmIzmijeniPark
+            // lblBrojSjedala
+            // 
+            this.lblBrojSjedala.AutoSize = true;
+            this.lblBrojSjedala.Location = new System.Drawing.Point(20, 72);
+            this.lblBrojSjedala.Name = "lblBrojSjedala";
+            this.lblBrojSjedala.Size = new System.Drawing.Size(64, 13);
+            this.lblBrojSjedala.TabIndex = 8;
+            this.lblBrojSjedala.Text = "Broj sjedala:";
+            // 
+            // lblKilometraza
+            // 
+            this.lblKilometraza.AutoSize = true;
+            this.lblKilometraza.Location = new System.Drawing.Point(20, 126);
+            this.lblKilometraza.Name = "lblKilometraza";
+            this.lblKilometraza.Size = new System.Drawing.Size(64, 13);
+            this.lblKilometraza.TabIndex = 9;
+            this.lblKilometraza.Text = "Kilometraža:";
+            // 
+            // lblRegistracija
+            // 
+            this.lblRegistracija.AutoSize = true;
+            this.lblRegistracija.Location = new System.Drawing.Point(20, 178);
+            this.lblRegistracija.Name = "lblRegistracija";
+            this.lblRegistracija.Size = new System.Drawing.Size(65, 13);
+            this.lblRegistracija.TabIndex = 10;
+            this.lblRegistracija.Text = "Registracija:";
+            // 
+            // FrmDodajPark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 372);
-            this.Controls.Add(this.btnBrisi);
-            this.Controls.Add(this.btnOdustani);
-            this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.lblRegistracija);
             this.Controls.Add(this.lblKilometraza);
             this.Controls.Add(this.lblBrojSjedala);
             this.Controls.Add(this.lblProizvodjac);
+            this.Controls.Add(this.btnOdustani);
+            this.Controls.Add(this.btnSpremi);
             this.Controls.Add(this.txtRegistracija);
             this.Controls.Add(this.txtKilometraza);
             this.Controls.Add(this.txtBrojSjedala);
@@ -154,11 +142,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmIzmijeniPark";
+            this.Name = "FrmDodajPark";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Izmjena podataka";
-            this.Load += new System.EventHandler(this.FrmIzmijeniPark_Load);
+            this.Text = "Dodavanje podataka";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,12 +157,11 @@
         private System.Windows.Forms.TextBox txtBrojSjedala;
         private System.Windows.Forms.TextBox txtKilometraza;
         private System.Windows.Forms.TextBox txtRegistracija;
+        private System.Windows.Forms.Button btnSpremi;
+        private System.Windows.Forms.Button btnOdustani;
         private System.Windows.Forms.Label lblProizvodjac;
         private System.Windows.Forms.Label lblBrojSjedala;
         private System.Windows.Forms.Label lblKilometraza;
         private System.Windows.Forms.Label lblRegistracija;
-        private System.Windows.Forms.Button btnSpremi;
-        private System.Windows.Forms.Button btnOdustani;
-        private System.Windows.Forms.Button btnBrisi;
     }
 }

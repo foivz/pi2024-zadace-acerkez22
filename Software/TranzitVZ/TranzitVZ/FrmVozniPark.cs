@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TranzitVZ.Models;
 using TranzitVZ.Repositories;
 
 namespace TranzitVZ
@@ -37,6 +38,37 @@ namespace TranzitVZ
         {
             var vozniParks = VozniParkRepository.GetVozniParks();
             dgvVozniPark.DataSource = vozniParks;
+        }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodajPark frmDodajPark = new FrmDodajPark();
+            frmDodajPark.ShowDialog();
+            ShowVozniPark();
+        }
+
+        private void btnIzmijeni_Click(object sender, EventArgs e)
+        {
+            VozniPark odabran = dgvVozniPark.CurrentRow.DataBoundItem as VozniPark;
+
+            FrmIzmijeniPark frmIzmijeniPark = new FrmIzmijeniPark(odabran);
+            frmIzmijeniPark.ShowDialog();
+            ShowVozniPark();
+        }
+
+        private void txtTrazi_TextChanged(object sender, EventArgs e)
+        {
+            string trazi = txtTrazi.Text.Trim();
+
+            if (!string.IsNullOrWhiteSpace(trazi))
+            {
+                var vozniPark = VozniParkRepository.SearchVozniPark(trazi);
+                dgvVozniPark.DataSource = vozniPark;
+            }
+            else
+            {
+                ShowVozniPark();
+            }
         }
     }
 }

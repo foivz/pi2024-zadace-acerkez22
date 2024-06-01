@@ -36,9 +36,9 @@ namespace TranzitVZ
         private void FrmIzmijeniRed_Load(object sender, EventArgs e)
         {
             var vozniRed = VozniRedRepository.GetVozniRed(int.Parse(odabran.BrojStanice.ToString()));
-            txtNazivStanice.Text = odabran.NazivStanice.ToString();
-            txtDodatniOpis.Text = odabran.DodatniOpis.ToString();
-            txtVrijemePolaska.Text = odabran.VrijemePolaska.ToString();
+            txtNazivStanice.Text = odabran.NazivStanice.ToString().Trim();
+            txtDodatniOpis.Text = odabran.DodatniOpis.ToString().Trim();
+            txtVrijemePolaska.Text = odabran.VrijemePolaska.ToString().Trim();
         }
 
         private void btnBrisi_Click(object sender, EventArgs e)
