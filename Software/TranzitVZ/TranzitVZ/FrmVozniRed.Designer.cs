@@ -30,6 +30,8 @@
         {
             this.dgvVozniRed = new System.Windows.Forms.DataGridView();
             this.btnNatrag = new System.Windows.Forms.Button();
+            this.btnDodaj = new System.Windows.Forms.Button();
+            this.btnIzmijeni = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVozniRed)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,9 +44,9 @@
             this.dgvVozniRed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVozniRed.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvVozniRed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvVozniRed.Location = new System.Drawing.Point(12, 12);
+            this.dgvVozniRed.Location = new System.Drawing.Point(12, 53);
             this.dgvVozniRed.Name = "dgvVozniRed";
-            this.dgvVozniRed.Size = new System.Drawing.Size(1084, 524);
+            this.dgvVozniRed.Size = new System.Drawing.Size(1084, 483);
             this.dgvVozniRed.TabIndex = 0;
             // 
             // btnNatrag
@@ -58,11 +60,33 @@
             this.btnNatrag.UseVisualStyleBackColor = true;
             this.btnNatrag.Click += new System.EventHandler(this.btnNatrag_Click);
             // 
+            // btnDodaj
+            // 
+            this.btnDodaj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDodaj.Location = new System.Drawing.Point(12, 558);
+            this.btnDodaj.Name = "btnDodaj";
+            this.btnDodaj.Size = new System.Drawing.Size(140, 62);
+            this.btnDodaj.TabIndex = 2;
+            this.btnDodaj.Text = "Dodaj";
+            this.btnDodaj.UseVisualStyleBackColor = true;
+            // 
+            // btnIzmijeni
+            // 
+            this.btnIzmijeni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIzmijeni.Location = new System.Drawing.Point(158, 558);
+            this.btnIzmijeni.Name = "btnIzmijeni";
+            this.btnIzmijeni.Size = new System.Drawing.Size(140, 62);
+            this.btnIzmijeni.TabIndex = 3;
+            this.btnIzmijeni.Text = "Izmijeni";
+            this.btnIzmijeni.UseVisualStyleBackColor = true;
+            // 
             // FrmVozniRed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1108, 642);
+            this.Controls.Add(this.btnIzmijeni);
+            this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.btnNatrag);
             this.Controls.Add(this.dgvVozniRed);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -81,5 +105,7 @@
 
         private System.Windows.Forms.DataGridView dgvVozniRed;
         private System.Windows.Forms.Button btnNatrag;
+        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.Button btnIzmijeni;
     }
 }
