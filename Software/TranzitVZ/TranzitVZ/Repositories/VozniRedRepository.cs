@@ -13,7 +13,7 @@ namespace TranzitVZ.Repositories
         public static VozniRed GetVozniRed(int brojStanice)
         {
             VozniRed vozniRed = null;
-            string sql = $"SELECT * FROM VozniRed WHERE brojStanice = {brojStanice}";
+            string sql = $"SELECT brojStanice FROM VozniRed WHERE brojStanice = {brojStanice}";
             DB.OpenConnection();
             var reader = DB.GetDataReader(sql);
             if(reader.HasRows)
@@ -61,6 +61,14 @@ namespace TranzitVZ.Repositories
                 VrijemePolaska = vrijemePolaska
             };
             return vozniRed;
+        }
+
+        public static void DodajVozniRed(string nazivStanice, string dodatniOpis, string vrijemePolaska)
+        {
+            string sql = $"INSERT INTO VozniRed (nazivStanice, dodatniOpis, vrijemePolaska) VALUES ('{nazivStanice}', '{dodatniOpis}', '{vrijemePolaska}')";
+            DB.OpenConnection();
+            DB.ExecuteCommand(sql);
+            DB.CloseConnection();
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TranzitVZ.Repositories;
 
 namespace TranzitVZ.Models
 {
@@ -13,5 +14,6 @@ namespace TranzitVZ.Models
         public string DodatniOpis { get; set; }
         public string VrijemePolaska { get; set; }
 
+        
     }
 }

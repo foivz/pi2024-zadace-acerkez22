@@ -46,6 +46,7 @@
             this.dgvVozniRed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVozniRed.Location = new System.Drawing.Point(12, 53);
             this.dgvVozniRed.Name = "dgvVozniRed";
+            this.dgvVozniRed.ReadOnly = true;
             this.dgvVozniRed.Size = new System.Drawing.Size(1084, 483);
             this.dgvVozniRed.TabIndex = 0;
             // 
@@ -69,6 +70,7 @@
             this.btnDodaj.TabIndex = 2;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
+            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // btnIzmijeni
             // 

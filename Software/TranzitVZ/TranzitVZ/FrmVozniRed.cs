@@ -25,7 +25,7 @@ namespace TranzitVZ
             DB.SetConfiguration("PI2324_acerkez22_DB", "PI2324_acerkez22_User", "7P-ZyF0{");
             ShowVozniRed();
         }
-        private void ShowVozniRed()
+        public void ShowVozniRed()
         {
             var vozniReds = VozniRedRepository.GetVozniReds();
             dgvVozniRed.DataSource = vozniReds;
@@ -38,5 +38,17 @@ namespace TranzitVZ
             frmOdabir.ShowDialog();
             Close();
         }
+
+        private void btnDodaj_Click(object sender, EventArgs e)
+        {
+            FrmDodaj frmDodaj = new FrmDodaj();
+            frmDodaj.Osvjezi += new EventHandler(FrmDodaj_Osvjezi);
+            frmDodaj.ShowDialog();
+        }
+        private void FrmDodaj_Osvjezi(object sender, EventArgs e)
+        {
+            ShowVozniRed();
+        }
+        
     }
 }

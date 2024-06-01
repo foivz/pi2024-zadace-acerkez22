@@ -58,7 +58,6 @@
             this.lblUsername.Size = new System.Drawing.Size(78, 13);
             this.lblUsername.TabIndex = 2;
             this.lblUsername.Text = "Korisničko ime:";
-            this.lblUsername.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblPassword
             // 
@@ -96,7 +95,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
-            this.Load += new System.EventHandler(this.FrmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
