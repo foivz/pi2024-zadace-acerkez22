@@ -20,7 +20,7 @@ Zadatak:
 https://github.com/foivz/pi2024-zadace-acerkez22/blob/master/Zadatak%20-%20Gradski%20prijevoz.pdf
 
 ## Resursi
-Svi resursi nalaze se u mapi _Documentation_.
-Podaci za prijavu:
-Korisničko ime: ihorvat
+Svi resursi nalaze se u mapi _Documentation_.<br>
+Podaci za prijavu:<br>
+Korisničko ime: ihorvat<br>
 Lozinka: ihorvat
