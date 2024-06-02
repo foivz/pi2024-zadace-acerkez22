@@ -21,3 +21,6 @@ https://github.com/foivz/pi2024-zadace-acerkez22/blob/master/Zadatak%20-%20Grads
 
 ## Resursi
 Svi resursi nalaze se u mapi _Documentation_.
+Podaci za prijavu:
+Korisničko ime: ihorvat
+Lozinka: ihorvat
