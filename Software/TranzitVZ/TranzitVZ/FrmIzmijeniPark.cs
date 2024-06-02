@@ -31,6 +31,7 @@ namespace TranzitVZ
         {
             DB.SetConfiguration("PI2324_acerkez22_DB", "PI2324_acerkez22_User", "7P-ZyF0{");
             VozniParkRepository.PromijeniVozniPark(txtProizvodjac.Text, int.Parse(txtBrojSjedala.Text), int.Parse(txtKilometraza.Text), txtRegistracija.Text, int.Parse(odabran.BrojAutobusa.ToString()));
+            Close();
         }
 
         private void btnBrisi_Click(object sender, EventArgs e)
